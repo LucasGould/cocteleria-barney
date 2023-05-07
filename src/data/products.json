@@ -1,0 +1,53 @@
+[
+    {
+        "id": 1 , 
+        "title": "Fernet Branca",
+        "price": 3000 ,
+        "pictureUrl": "",
+        "stock": 10, 
+        "description": "",
+        "category": "Bebidas Blancas"
+    },
+    {
+        "id": "2" , 
+        "title": "Vermouth Carpano Rosso",
+        "price": 1000 ,
+        "pictureUrl": "",
+        "stock": 12, 
+        "description": "",
+        "category": "Bebidas Blancas"
+    },
+    {
+        "id": "3" , 
+        "title": "Andes Origen - Rubia",
+        "price": 600 ,
+        "pictureUrl": "",
+        "stock": 10, 
+        "description": "",
+        "category": "Cervezas"
+    },{
+        "id": "4" , 
+        "title": "Patagonia Pilsner",
+        "price": 750 ,
+        "pictureUrl": "",
+        "stock": 10, 
+        "description": "",
+        "category": "Cervezas"
+    },{
+        "id": "5" , 
+        "title": "Don Valentin",
+        "price": 1200 ,
+        "pictureUrl": "",
+        "stock": 10, 
+        "description": "",
+        "category": "Vinos"
+    },{
+        "id": "6" , 
+        "title": "Otro Loco Más",
+        "price": 850 ,
+        "pictureUrl": "",
+        "stock": 10, 
+        "description": "",
+        "category": "Vinos"
+    }
+]
