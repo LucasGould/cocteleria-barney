@@ -3,20 +3,18 @@ import Button from "react-bootstrap/Button"
 
 import './assets/ItemCount.css'
 
-export const ItemCount  = () => {
+export const ItemCount = ({stock, initial, onAdd}) => {
+    const [quantity, setQuantity] = useState(initial)
 
-    const [counter, setCounter] = useState (1)
-    const aviableStock = 4
-    
-    const addCount = () => {
-        if (counter<aviableStock) {
-            setCounter(prev => prev +1 )
+    const addCount = () =>{   
+        if (quantity < stock) {
+            setQuantity(quantity+1)
         }
     }
 
-    const removeCount = () => {
-        if (counter>1) {
-        setCounter(prev => prev -1 )
+    const removeCount = () => { 
+        if (quantity > 0) {
+            setQuantity(quantity-1)
         }
     }
 
@@ -25,9 +23,9 @@ export const ItemCount  = () => {
     return (
         <div id="counter-container">
             <Button variant="dark" onClick={removeCount} id="counter-button">-</Button>
-            <div id="counter-num">{counter}</div>
+            <div id="counter-num">{quantity}</div>
             <Button variant="dark" onClick={addCount} id="counter-button">+</Button>
-            <Button variant="primary" id="add-button">Agregar al Carrito</Button>
+            <Button variant="primary" id="add-button" onClick={() => onAdd(quantity)} disabled={!stock}>Agregar al Carrito</Button>
         </div>
     )
 }
