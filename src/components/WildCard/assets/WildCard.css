@@ -1,0 +1,11 @@
+#notfound-title {
+    display: grid;
+    justify-content: center;
+    margin: 25px 0px 25px 0px;
+}
+
+#notfound-img {
+    display: grid;
+    margin: 25px auto;
+    border-radius: 50%;
+}

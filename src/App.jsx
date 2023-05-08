@@ -11,10 +11,10 @@ function App() {
     <BrowserRouter>
       <NavBar />
       <Routes>
-      <Route path="/" element={ <ItemListContainer greeting={"Bienvenido a Barney's."} />}></Route>
-      <Route path="/category/:id" element={ <ItemListContainer greeting="Productos" />}></Route>
-      <Route path="/item/:id" element={ <ItemDetailContainer />}></Route>
-      <Route path="*" element={ <WildCard />}></Route>
+        <Route path="/" element={ <ItemListContainer greeting={"Bienvenido a Barney's."} />}></Route>
+        <Route path="/category/:id" element={ <ItemListContainer greeting="Productos" />}></Route>
+        <Route path="/item/:id" element={ <ItemDetailContainer />}></Route>
+        <Route path="*" element={ <WildCard />} />
       </Routes>
     </BrowserRouter>
   );
