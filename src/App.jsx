@@ -5,7 +5,6 @@ import { ItemListContainer } from './container/ItemListContainer';
 import { WildCard } from './components/WildCard/Wildcard';
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import './resources/barneylogo2.jpg'
 
 function App() {
   return (
