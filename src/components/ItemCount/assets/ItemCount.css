@@ -1,0 +1,22 @@
+#counter-container {
+    display: inline-flex;
+}
+
+#counter-button {
+    padding: auto;
+    border-radius: 50%;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+#counter-num {
+    font-weight: bolder;
+    font-size: large;
+    align-self: center;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+#add-button {
+    margin-left: 20px;
+}

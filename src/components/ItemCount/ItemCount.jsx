@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import Button from "react-bootstrap/Button"
+
+import './assets/ItemCount.css'
 
 export const ItemCount  = () => {
 
@@ -20,11 +23,11 @@ export const ItemCount  = () => {
 
 
     return (
-        <>
-            <button onClick={removeCount}>-</button>
-            <div>{counter}</div>
-            <button onClick={addCount} >+</button>
-            <button>Agregar al carrito</button>
-        </>
+        <div id="counter-container">
+            <Button variant="dark" onClick={removeCount} id="counter-button">-</Button>
+            <div id="counter-num">{counter}</div>
+            <Button variant="dark" onClick={addCount} id="counter-button">+</Button>
+            <Button variant="primary" id="add-button">Agregar al Carrito</Button>
+        </div>
     )
 }
