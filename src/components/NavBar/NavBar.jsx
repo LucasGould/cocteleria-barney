@@ -8,7 +8,7 @@ import { CartWidget } from "../CartWidget/CartWidget";
 
 import './assets/NavBar.css'
 import products from "../../data/products.json"
-import logo from "./assets/barneylogo.png"
+
 
 export const NavBar = () => {
 	const [itemsMenu, setItemsMenu] = useState([])
@@ -28,15 +28,15 @@ export const NavBar = () => {
 		<Navbar bg="dark" variant="dark" >
 			<Container >
 				<Navbar.Brand href="#home">Barney's</Navbar.Brand>
-				<Nav className="me-auto" id="nav">
-					<NavLink to="/">HOME</NavLink>
+				<Nav className="me-auto">
+					<NavLink to="/" id="nav">HOME</NavLink>
 					{itemsMenu?.map(item => (
-						<NavLink key={item} to={`/category/${item}`}>
+						<NavLink key={item} to={`/category/${item}`} id="nav">
 							{item.toUpperCase()}
 						</NavLink>
 					))}
 				</Nav>
-				<CartWidget />
+				<CartWidget counter={0}/>
 			</Container>
 		</Navbar>
 	)

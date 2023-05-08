@@ -1,0 +1,23 @@
+#card-item {
+    margin: 10px;
+    height: 425px;
+}
+
+#card-title {
+    display: flex;
+    justify-content: center;
+}
+
+#card-price {
+    font-weight: 500;
+    font-size: larger;
+    position: absolute;
+    left: 25px;
+    bottom: 15px;
+}
+
+#card-button {
+    position: absolute;
+    bottom: 25px;
+    right: 20px;
+}

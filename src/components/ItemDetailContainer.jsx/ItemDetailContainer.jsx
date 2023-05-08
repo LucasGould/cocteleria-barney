@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom"
 
 import { ItemDetail } from "../ItemDetail/ItemDetail"
 import products from "../../data/products.json"
+import './assets/ItemDetailContainer.css'
 
 export const ItemDetailContainer = () => {
 	const [product, setProduct] = useState({})
@@ -21,7 +22,7 @@ export const ItemDetailContainer = () => {
 
 	 console.log(product)
 	return (
-		<Container>
+		<Container id="item-detail-container">
 			<ItemDetail product={product} />
 		</Container>
 	)

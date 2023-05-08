@@ -1,0 +1,22 @@
+#item-detail {
+    margin: 10px;
+    height: 600px;
+    display: grid;
+    justify-self: center;
+}
+
+#detail-title {
+    font-size: xx-large;
+}
+
+#detail-img {
+    width: 65%;
+    display: flex;
+    justify-self: center;
+}
+
+#detail-price {
+    font-size: larger;
+    font-weight: bolder;
+    color: darkgreen;
+}
