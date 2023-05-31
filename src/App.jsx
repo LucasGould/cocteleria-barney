@@ -4,6 +4,7 @@ import { NavBar } from './components/NavBar/NavBar';
 import { ItemListContainer } from './container/ItemListContainer';
 import { WildCard } from './components/WildCard/Wildcard';
 import { CartProvider } from './context/cartContext';
+import { Cart } from './Cart/Cart';
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
@@ -16,7 +17,10 @@ function App() {
           <Route path="/" element={ <ItemListContainer greeting={"Bienvenido a Barney's."} />}></Route>
           <Route path="/category/:id" element={ <ItemListContainer greeting="Productos" />}></Route>
           <Route path="/item/:id" element={ <ItemDetailContainer />}></Route>
+          <Route path='/cart' element={<Cart/>} />
+          {/* <Route path='/checkout' element={<Checkout/>} /> */}
           <Route path="*" element={ <WildCard />} />
+          
         </Routes>
       </BrowserRouter>
     </CartProvider>

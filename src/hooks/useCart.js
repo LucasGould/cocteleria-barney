@@ -3,6 +3,13 @@ import { useState } from "react"
 export const useCart = () => {
 	const [addedProducts, setaddedProducts] = useState([])
 
+    const totalQuantity = () =>
+    addedProducts.reduce(
+        (acc, currValue) =>
+            acc + currValue.quantity,
+        0
+    )
+
 	const addItem = (product, quantity) => {
 		const { stock, ...rest } = product
 		const alreadyExists = addedProducts.some(
@@ -39,6 +46,7 @@ export const useCart = () => {
 
 	return {
 		addedProducts,
+        totalQuantity,
 		addItem,
 		clear,
 		deleteItem,
