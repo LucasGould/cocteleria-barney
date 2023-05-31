@@ -12,6 +12,7 @@ export const ItemDetail = ({product}) => {
 	const onAdd = quantity => addItem(product, quantity)
 
 	return (
+		
 		<Card className="text-center" style={{ width: '35rem' }} id="item-detail">
 			<Card.Img variant="top" src={product.pictureUrl} alt={product.title} id="detail-img"/>
 			<Card.Body>
