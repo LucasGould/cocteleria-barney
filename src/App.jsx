@@ -4,7 +4,7 @@ import { NavBar } from './components/NavBar/NavBar';
 import { ItemListContainer } from './container/ItemListContainer';
 import { WildCard } from './components/WildCard/Wildcard';
 import { CartProvider } from './context/cartContext';
-import { Cart } from './Cart/Cart';
+import { Cart } from './components/Cart/Cart';
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 

@@ -44,11 +44,27 @@ export const useCart = () => {
 
 	const clear = () => setaddedProducts([])
 
+    const total = () =>
+		addedProducts.reduce(
+			(acc, currValue) =>
+				acc + currValue.quantity * currValue.price,
+			0
+		)
+
+    const redirect = () => {
+        setTimeout(() =>{
+            window.location = origin  
+        }
+            , 2000)
+        }    
+
 	return {
 		addedProducts,
         totalQuantity,
 		addItem,
 		clear,
 		deleteItem,
+        total,
+        redirect,
 	}
 }
