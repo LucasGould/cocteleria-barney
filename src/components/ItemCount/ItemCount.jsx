@@ -8,7 +8,7 @@ import Form from "react-bootstrap/Form"
 import './assets/ItemCount.css'
 
 export const ItemCount = ({ stock, onAdd, initial }) => {
-	const [counter, setCounter] = useState(initial ?? 0)
+	const [counter, setCounter] = useState(initial ?? 1)
 
 	const handleIncreaseCount = () => {
 		if (stock > counter) setCounter(counter + 1)
@@ -31,6 +31,7 @@ export const ItemCount = ({ stock, onAdd, initial }) => {
 						</Button>
                         
 						<Form.Control
+							readOnly={true}
 							value={counter}
 							className="text-center"
 						/>
@@ -50,9 +51,6 @@ export const ItemCount = ({ stock, onAdd, initial }) => {
 							Agregar al carrito
 						</Button>
 					)}
-					<div className="mt-4">
-						Stock disponible: {stock - counter}
-					</div>
 				</>
 			) : (
 				<>

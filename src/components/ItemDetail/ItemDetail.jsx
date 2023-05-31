@@ -18,7 +18,7 @@ export const ItemDetail = ({product}) => {
 				<Card.Title id="detail-title">{product.title}</Card.Title>
 				<Card.Text id="detail-text">{product.description}</Card.Text>
 				<Card.Text id="detail-price">${product.price} + iva</Card.Text>
-				<ItemCount initial={1} stock={product.stock} onAdd={onAdd}/>
+				<ItemCount stock={product.stock} onAdd={onAdd}/>
 			</Card.Body>
 		</Card>
 		

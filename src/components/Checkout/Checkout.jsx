@@ -78,8 +78,6 @@ export const Checkout = () => {
 						>
 							<Form.Label>Email</Form.Label>
 							<Form.Control
-								onChange={handleChange}
-								value={formValues.email}
 								type="email"
 								name="email"
 							/>
