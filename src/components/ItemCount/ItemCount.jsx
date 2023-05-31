@@ -4,7 +4,9 @@ import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button"
 import InputGroup from "react-bootstrap/InputGroup"
 import Form from "react-bootstrap/Form"
+import { ToastContainer, toast } from 'react-toastify';
 
+import 'react-toastify/dist/ReactToastify.css';
 import './assets/ItemCount.css'
 
 export const ItemCount = ({ stock, onAdd, initial }) => {
@@ -18,8 +20,21 @@ export const ItemCount = ({ stock, onAdd, initial }) => {
 		if (counter > 0) setCounter(counter - 1)
 	}
 
+	const notification = () => {
+		toast.success('Item agregado!', {
+			position: "bottom-right",
+			autoClose: 5000,
+			hideProgressBar: true,
+			closeOnClick: true,
+			pauseOnHover: true,
+			draggable: true,
+			progress: undefined,
+			theme: "dark",
+			});
+	} 
+
 	return (
-		<section className="col-12 col-sm-6 col-md-3 mb-4">
+		<section>
 			{stock > 0 ? (
 				<>
 					<InputGroup>
@@ -42,11 +57,13 @@ export const ItemCount = ({ stock, onAdd, initial }) => {
 							+
 						</Button>
 					</InputGroup>
+					<ToastContainer />
 					{!!counter && (
 						<Button
 							variant="outline-primary"
 							className="mt-4"
-							onClick={() => onAdd(counter)}
+							onClick={() =>{ onAdd(counter) ; notification()}}
+							
 						>
 							Agregar al carrito
 						</Button>
