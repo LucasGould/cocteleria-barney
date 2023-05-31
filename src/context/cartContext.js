@@ -1,7 +1,13 @@
 import { createContext } from "react";
 
-const CartContext = createContext([])
+import { useCart } from "../hooks/useCart"
 
-export const CartProvider = ({ children }) => (
-    <CartContext.Provider value={[]}>{children}</CartContext.Provider>
-)
+export const CartContext = createContext([])
+
+export const CartProvider = ({ children }) => {
+    const cart = useCart()
+
+    return (
+    <CartContext.Provider value={cart}>{children}</CartContext.Provider>
+    )
+}
