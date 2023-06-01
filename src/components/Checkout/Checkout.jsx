@@ -36,15 +36,12 @@ export const Checkout = () => {
 					'¡Compra realizada!',
 					'Código de compra: ' + response.id,
 					'success'
-				  ).then((value) => {
-					if (value=true) {
-						clear()
-					}
-				})
-				
-			}
-		})
+				  )
+			  	clear()
+			}}
+		)
 	}
+
 
 	const handleChange = ev => {
 		setFormValues(prev => ({
