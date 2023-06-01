@@ -7,6 +7,7 @@ import { Button } from "react-bootstrap"
 import Swal from 'sweetalert2'
 
 import { CartContext } from "../../context/cartContext"
+import './assets/Checkout.css'
 
 export const Checkout = () => {
     const { addedProducts, clear , total , redirect } = useContext(CartContext)
@@ -61,8 +62,8 @@ export const Checkout = () => {
                 </>
 			) : (
                 <>
-                    <h2>Ingresar datos de usuario</h2>
-					<Form>
+                    <h2 id="checkout-title">Datos del comprador/a</h2>
+					<Form id="checkout-form" >
 						<Form.Group
 							className="mb-3"
 						>
@@ -86,7 +87,7 @@ export const Checkout = () => {
                         <Form.Group
 							className="mb-3"
 						>
-							<Form.Label>Vuelva a ingresar su Email</Form.Label>
+							<Form.Label>Email</Form.Label>
 							<Form.Control
 								onChange={handleChange}
 								value={formValues.email}
@@ -97,13 +98,22 @@ export const Checkout = () => {
 						<Form.Group
 							className="mb-3"
 						>
-							<Form.Label>Email</Form.Label>
+							<Form.Label>Vuelva a ingresar su Email</Form.Label>
 							<Form.Control
-								value={formValues.email2}
+								onChange={handleChange}
+								value={formValues.email}
 								type="email"
 								name="email"
 							/>
 						</Form.Group>
+
+						<Button
+							variant="primary"
+							type="button"
+							onClick={sendOrder}
+						>
+							Finalizar compra
+						</Button> 
 {/* 						
 						{{...formValues.email} === {...formValues.email2} ? 
 								<Button

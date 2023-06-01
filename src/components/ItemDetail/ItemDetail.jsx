@@ -19,7 +19,7 @@ export const ItemDetail = ({product}) => {
 
 	return (
 		
-		<Card className="text-center" style={{ width: '35rem' }} id="item-detail">
+		<Card className="text-center" style={{ }} id="item-detail">
 			<Card.Img variant="top" src={product.pictureUrl} alt={product.title} id="detail-img"/>
 			<Card.Body>
 				<Card.Title id="detail-title">{product.title}</Card.Title>

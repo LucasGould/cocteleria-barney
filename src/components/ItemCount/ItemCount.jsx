@@ -7,7 +7,6 @@ import Form from "react-bootstrap/Form"
 import { ToastContainer, toast } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
-import './assets/ItemCount.css'
 
 export const ItemCount = ({ stock, onAdd, initial }) => {
 	const [counter, setCounter] = useState(initial ?? 1)
@@ -60,9 +59,10 @@ export const ItemCount = ({ stock, onAdd, initial }) => {
 					<ToastContainer />
 					{!!counter && (
 						<Button
-							variant="outline-primary"
+							variant="primary"
 							className="mt-4"
 							onClick={() =>{ onAdd(counter) ; notification()}}
+							id="add-button"
 							
 						>
 							Agregar al carrito

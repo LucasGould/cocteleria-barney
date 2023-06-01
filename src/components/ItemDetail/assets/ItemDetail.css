@@ -1,8 +1,9 @@
 #item-detail {
     margin: 10px;
-    height: 600px;
+    height: 650px;
     display: grid;
     justify-self: center;
+    width: 35rem;
 }
 
 #detail-title {
