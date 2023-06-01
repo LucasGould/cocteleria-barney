@@ -1,9 +1,14 @@
 #cartwidget-span {
     padding-left: 5px;
+    padding-right: 10px;
     color: ivory;
 }
 
 #cartwidget-img {
     height: 45px;
     border-radius: 50%;
+}
+
+#to-cart {
+    border-color: aliceblue;
 }

@@ -15,6 +15,7 @@ export const Checkout = () => {
 		name: "",
 		phone: "",
 		email: "",
+		email2: "",
 	})
 
     const sendOrder = () => {
@@ -82,16 +83,6 @@ export const Checkout = () => {
 								name="phone"
 							/>
 						</Form.Group>
-						<Form.Group
-							className="mb-3"
-						>
-							<Form.Label>Email</Form.Label>
-							<Form.Control
-								type="email"
-								name="email"
-							/>
-						</Form.Group>
-
                         <Form.Group
 							className="mb-3"
 						>
@@ -103,14 +94,33 @@ export const Checkout = () => {
 								name="email"
 							/>
 						</Form.Group>
-						
-						<Button
-							variant="primary"
-							type="button"
-							onClick={sendOrder}
+						<Form.Group
+							className="mb-3"
 						>
-							Finalizar compra
-						</Button>
+							<Form.Label>Email</Form.Label>
+							<Form.Control
+								value={formValues.email2}
+								type="email"
+								name="email"
+							/>
+						</Form.Group>
+{/* 						
+						{{...formValues.email} === {...formValues.email2} ? 
+								<Button
+								variant="primary"
+								type="button"
+								onClick={sendOrder}
+							>
+								Finalizar compra
+							</Button> 
+							: <>{Swal.fire(
+								'Ocurrió un error',
+								'Compruebe que los mails coincidan',
+								'error'
+							  )}
+							  </>
+							}
+						 */}
 					</Form>
                 </>
             )}

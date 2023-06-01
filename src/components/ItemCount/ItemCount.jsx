@@ -72,11 +72,9 @@ export const ItemCount = ({ stock, onAdd, initial }) => {
 			) : (
 				<>
 					<div className="mt-4">No hay stock</div>
-					<Link to="/">
-						<Button variant="outline-primary" className="mt-4">
-							Seguir comprando
-						</Button>
-					</Link>
+					<Button>
+						<Link to="/" id="link-home">Seguir Comprando</Link>
+					</Button>
 				</>
 			)}
 		</section>

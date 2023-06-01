@@ -19,7 +19,7 @@ export const CartWidget = () => {
                 <>
 					<img src={cart} alt="Carrito de compras" id="cartwidget-img" />
 					<span id="cartwidget-span">{totalQuantity()}</span>
-				    <Button>Terminar mi compra</Button>
+				    <Button id="to-cart" variant="dark">Terminar mi compra</Button>
                 </>
 			</Link>
 		)

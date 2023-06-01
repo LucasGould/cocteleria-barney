@@ -1,0 +1,18 @@
+#cart-title{
+    display: grid;
+    justify-content: center;
+}
+#cart-subtitle{
+    display: grid;
+    justify-content: center;
+}
+#cart-table{
+    margin: 0 auto;
+    text-align: center
+}
+#cart-clear{
+    text-align: center
+}
+#cart-deleteitem{
+    text-align: center
+}
