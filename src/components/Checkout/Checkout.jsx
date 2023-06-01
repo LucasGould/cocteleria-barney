@@ -4,6 +4,7 @@ import { useContext } from "react"
 import { getFirestore, collection, addDoc, Timestamp } from "firebase/firestore"
 import Form from "react-bootstrap/Form"
 import { Button } from "react-bootstrap"
+import Swal from 'sweetalert2'
 
 import { CartContext } from "../../context/cartContext"
 
@@ -29,8 +30,16 @@ export const Checkout = () => {
 
 		addDoc(orderCollection, order).then(response => {
 			if (response.id) {
-				clear()
-				alert("Su orden: " + response.id + " ha sido completada!")
+				Swal.fire(
+					'¡Compra realizada!',
+					'Código de compra: ' + response.id,
+					'success'
+				  ).then((value) => {
+					if (value=true) {
+						clear()
+					}
+				})
+				
 			}
 		})
 	}

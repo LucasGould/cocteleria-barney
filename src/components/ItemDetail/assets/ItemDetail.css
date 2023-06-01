@@ -20,3 +20,8 @@
     font-weight: bolder;
     color: darkgreen;
 }
+
+#link-home {
+    color: aliceblue;
+    text-decoration: none;
+}
