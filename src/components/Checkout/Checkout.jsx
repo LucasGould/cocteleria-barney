@@ -53,6 +53,18 @@ export const Checkout = () => {
 		}))
 	}
 
+	const handleCheckout = () => {
+		if (formValues.email === formValues.email2) {
+			sendOrder();
+		} else {
+			Swal.fire(
+				'Ocurrió un error',
+				'Compruebe que los mails coincidan',
+				'error'
+			);
+		}
+	}
+
     return (
         <>
             
@@ -101,28 +113,20 @@ export const Checkout = () => {
 							<Form.Label>Vuelva a ingresar su Email</Form.Label>
 							<Form.Control
 								onChange={handleChange}
-								value={formValues.email}
+								value={formValues.email2}
 								type="email"
-								name="email"
+								name="email2"
 							/>
 						</Form.Group>
 
-						{{...formValues.email} === {...formValues.email2} ? 
-								<Button
-								variant="primary"
-								type="button"
-								onClick={sendOrder}
-							>
-								Finalizar compra
-							</Button> 
-							: <>{Swal.fire(
-								'Ocurrió un error',
-								'Compruebe que los mails coincidan',
-								'error'
-							  )}
-							  </>
-							}
-							
+						<Button
+							variant="primary"
+							type="button"
+							onClick={handleCheckout}
+						>
+							Finalizar compra
+						</Button> 
+
 					</Form>
                 </>
             )}
