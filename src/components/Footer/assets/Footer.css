@@ -1,0 +1,9 @@
+#footer {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: rgb(174, 174, 174);
+    margin-top: 50px;
+    justify-content: center;
+}

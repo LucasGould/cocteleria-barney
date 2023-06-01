@@ -107,14 +107,6 @@ export const Checkout = () => {
 							/>
 						</Form.Group>
 
-						<Button
-							variant="primary"
-							type="button"
-							onClick={sendOrder}
-						>
-							Finalizar compra
-						</Button> 
-{/* 						
 						{{...formValues.email} === {...formValues.email2} ? 
 								<Button
 								variant="primary"
@@ -130,7 +122,7 @@ export const Checkout = () => {
 							  )}
 							  </>
 							}
-						 */}
+							
 					</Form>
                 </>
             )}
